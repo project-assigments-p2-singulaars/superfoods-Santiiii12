@@ -1,0 +1,54 @@
+<!-- <section>
+    @for(food of FoodsTs;track FoodsTs){
+        <app-product-detail [foods]="food"/>
+      }
+</section>
+<p>cards works!</p>  -->
+<!-- <ul>
+  <li>{{FoodsTs.FoodsTs.name}}</li>
+</ul> -->
+<!-- <app-search-bar></app-search-bar> -->
+<div>
+
+  <input placeholder="Introduzca su busqueda" type="text" name="search" [(ngModel)]="inputValue">
+  <button (click)="searchFood()">Go!</button>
+</div>
+<app-form (formSent)="registerFood($event)"></app-form>
+<app-fooddetail></app-fooddetail>
+<section>
+  
+    <h1 class="todaymeal">Today meals</h1>
+
+    @for (meal of todayMeals; track $index) {
+      <h2 class="mealtitle">{{meal.name}}</h2>
+      <img class="mealimg"src={{meal.image}}>
+      <p> {{meal.calories}}</p>
+    }
+  
+</section>
+
+
+  @if (filterArray.length > 0) {
+
+  @for (foodElement of filterArray; track foodElement.name) {
+  <li>
+    <h3>{{ foodElement.name }}</h3>
+    <img class="cardsimg" src={{foodElement.image}}>
+    <p>{{foodElement.calories}}</p>
+    <p>{{foodElement.quantity}}</p>
+  </li>
+  }
+  }
+
+  @else {
+  @for (foodElement of food; track foodElement.name) {
+  <li>
+    <h3>{{ foodElement.name }}</h3>
+    <img class="cardsimg" src={{foodElement.image}}>
+    <p>{{foodElement.calories}}</p>
+    <p>{{foodElement.quantity}}</p>
+    <button class="mealbutton" (click)="addToMeal(foodElement)">Add today meals</button>
+  </li>
+  }
+  }
+

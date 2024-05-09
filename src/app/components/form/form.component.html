@@ -1,0 +1,14 @@
+<button (click)="showForm()">Add new Food</button>
+
+    <form id="addFoodForm" #foodForm="ngForm" (ngSubmit)="submit(foodForm)" ngNativeValidate >
+
+    <h2>Add Foods</h2>
+    <label for="food" > Food Name</label>
+
+    <input name="nameFood" id="food" type="text"  #nameFood="ngModel" ngModel>
+    <label for="calories"> Calories Number</label>
+    <input name="caloriesNumber" id="calories" type="text" #caloriesNumber="ngModel" ngModel>
+    <label for="url"> Url Image</label>
+    <input name="urlImage" id="url" type="text" #urlImage="ngModel" ngModel>
+    <button type="submit"  >Add Food</button>
+</form>
