@@ -1,3 +1,13 @@
 .hide{
     display:none;
 }
+h2{
+    font-size: 30px;
+    text-decoration:underline ;
+    margin-bottom: 20px;
+    
+}
+form{
+    margin-left: 72px;
+
+}

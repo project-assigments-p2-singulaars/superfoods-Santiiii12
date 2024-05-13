@@ -38,17 +38,19 @@ registerFood(food:FoodsTs){
 }
 
 
+
 @Output() todayDishSent = new EventEmitter();
 
   foodQuantity=1;
-
+calories=0
   quantity:number = 1;
 
   addToMeal(dish: FoodsTs){
     const selectedDish = {...dish, quantity: this.foodQuantity}
     // this.todayDishSent.emit(selectedDish)
     this.todayMeals.push(selectedDish);
+    this.calories+=dish.calories
+
   }
-  
 }
 
