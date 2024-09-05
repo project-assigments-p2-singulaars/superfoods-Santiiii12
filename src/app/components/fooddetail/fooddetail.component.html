@@ -1,0 +1,13 @@
+
+<ul id="foodContainer">
+    @for (foodElement of food ;track foodElement.name) {
+
+      <li>
+        <h2>{{foodElement.name}}</h2>
+        <img src={{foodElement.image}} class="foodImage">
+     
+        <div>
+        <button (click)="addToMeal(foodElement)">Add</button>
+      </div>
+    }
+      </ul>

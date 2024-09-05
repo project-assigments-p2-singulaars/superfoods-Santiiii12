@@ -1,0 +1,86 @@
+.cardsimg{
+    width:200px;
+    height:120px;
+    border-radius: 20px;
+    
+}
+
+button{
+    width: 50px;
+    height: 42px;
+    border:none;
+    border-radius:10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+
+}
+li::marker{
+    content:none;
+    
+}
+li{
+    width:30%;
+    margin-bottom:20px;
+
+}
+
+
+.mealimg{
+    width:16%;
+}
+.mealtitle{
+    color:black;
+    font-size:16px;
+}
+.todaymeal{
+    color:blue;
+    font-size: 30px;
+    margin-left: 72px;
+    margin-bottom:10px;
+    margin-top:50px;
+
+}
+ul{
+    font-size:16px;
+    display:flex;
+    flex-wrap:wrap;
+    background-color:greenyellow;
+    justify-content: center;
+}
+.ul1{
+    background-color: yellow;
+    margin-bottom:10px;
+
+}
+.ul1div{
+    width:30%;
+    margin-bottom:10px;
+
+}
+
+.mealbutton{
+    width:150px;
+    box-shadow: 10px 5px 5px;
+}
+.go{
+    display:flex;
+    justify-content: center;
+    margin-top:40px;
+    height:60px;
+
+
+}
+.calories{
+    color:red;
+    font-size: 30px;
+    margin-left: 72px;
+    margin-bottom:10px;
+    margin-top:40px;
+}
+.input1{
+    border-radius: 10px;
+    width:400px;
+    height:40px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+    border:none;
+    ;
+}
