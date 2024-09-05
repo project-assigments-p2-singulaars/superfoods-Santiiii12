@@ -1,7 +1,7 @@
 
 <div class="go">
 
-  <input placeholder="Introduzca su busqueda" type="text" name="search" [(ngModel)]="inputValue">
+  <input class="input1" placeholder="Introduzca su busqueda" type="text" name="search" [(ngModel)]="inputValue">
   <button (click)="searchFood()">Go!</button>
 </div>
 <app-form (formSent)="registerFood($event)"></app-form>

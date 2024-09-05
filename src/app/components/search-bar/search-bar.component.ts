@@ -13,11 +13,14 @@ import { FormsModule } from '@angular/forms';
   
 })
 export class SearchBarComponent {
+  [x: string]: any;
   foodslist:FoodsTs[] = [];
   filterArray!:FoodsTs[];
 
   ngOnInit(): void {
-    this.foodslist = foods;
+    
+  this.foodslist = foods;
+    
   }
 
   inputValue!:string;

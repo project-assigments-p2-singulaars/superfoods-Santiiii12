@@ -15,6 +15,8 @@ import { FormComponent } from '../form/form.component';
 })
 
 export class cardsComponent implements OnInit{
+
+
 inputValue!:string;
 filterArray: FoodsTs[] =[];
 
@@ -45,12 +47,19 @@ registerFood(food:FoodsTs){
 calories=0
   quantity:number = 1;
 
-  addToMeal(dish: FoodsTs){
-    const selectedDish = {...dish, quantity: this.foodQuantity}
-    // this.todayDishSent.emit(selectedDish)
-    this.todayMeals.push(selectedDish);
-    this.calories+=dish.calories
+ addToMeal(dish: FoodsTs) {
+    const existingMeal = this.todayMeals.find(meal => meal.name === dish.name);
 
-  }
+    if (existingMeal) {
+        existingMeal.calories += dish.calories;
+        existingMeal.quantity += this.foodQuantity;
+    } else {
+        const selectedDish = { ...dish, quantity: this.foodQuantity };
+        this.todayMeals.push(selectedDish);
+    }
+
+    this.calories += dish.calories;
+}
+
 }
 
